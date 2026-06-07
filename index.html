@@ -3,12 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>CASA · Mediterranean Food &amp; Wine — Puerto Aventuras</title>
+<title>CASA · Mediterranean Food & Wine — Puerto Aventuras</title>
 <meta name="description" content="CASA — Mediterranean tapas, natural wine bar, French-style rotisserie and daily specials in Puerto Aventuras.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Josefin+Sans:wght@100;200;300;400&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Josefin+Sans:wght@100;200;300;400&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{--slate:#3f3f4a;--slate-deep:#33333d;--slate-soft:#4a4a56;--cream:#efe8d6;--cream-dim:#cbc6b8;--terra:#c79064;--terra-deep:#a9744b;--olive:#8d9277;--line:rgba(239,232,214,.16);--shadow:0 18px 50px -20px rgba(0,0,0,.55)}
   *{box-sizing:border-box;margin:0;padding:0;min-width:0}
@@ -17,13 +15,11 @@
   img{display:block;max-width:100%}
   a{color:inherit;text-decoration:none}
   body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-
   .wm{font-family:"Josefin Sans",sans-serif;font-weight:200;letter-spacing:.32em;text-transform:uppercase;color:var(--cream);padding-left:.32em}
   .eyebrow{font-family:"Josefin Sans",sans-serif;font-weight:300;text-transform:uppercase;letter-spacing:.3em;font-size:.7rem;color:var(--terra);padding-left:.3em}
   h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(1.9rem,7.5vw,2.9rem);line-height:1.08;color:var(--cream);margin:.5rem 0 1.1rem}
   h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.45rem}
   p{color:var(--cream-dim)}
-
   header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.8rem 1rem;background:rgba(51,51,61,.72);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.35s}
   header.scrolled{border-bottom-color:var(--line);background:rgba(51,51,61,.92)}
   header .wm{font-size:1.3rem;white-space:nowrap}
@@ -35,7 +31,6 @@
   .call-btn svg{width:13px;height:13px;stroke:var(--terra)}
   .call-btn:hover,.call-btn:active{background:var(--terra);color:var(--slate-deep)}
   .call-btn:hover svg{stroke:var(--slate-deep)}
-
   .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:7rem 1.2rem 3rem;overflow:hidden}
   .hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(120% 80% at 50% 0%, rgba(63,63,74,.35) 0%, rgba(51,51,61,.92) 60%, var(--slate-deep) 100%),url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/c7/80/d8/juice-french-style-rotisserie.jpg?w=1200&h=1400&s=1") center/cover no-repeat}
   .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(51,51,61,.55),rgba(51,51,61,.35) 40%,var(--slate-deep) 98%)}
@@ -47,7 +42,7 @@
   .stars{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:.5rem;align-items:center;margin-top:1.5rem;font-family:"Josefin Sans",sans-serif;letter-spacing:.12em;font-size:.7rem;text-transform:uppercase;color:var(--cream-dim)}
   .stars b{color:var(--terra);font-weight:400}
   .hero-cta{display:flex;flex-direction:column;gap:.8rem;margin-top:2rem;width:100%;max-width:300px;margin-inline:auto}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:"Josefin Sans",sans-serif;font-weight:300;letter-spacing:.16em;text-transform:uppercase;font-size:.76rem;padding:1rem 1.3rem;border-radius:50px;transition:.25s}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:"Josefin Sans",sans-serif;font-weight:300;letter-spacing:.16em;text-transform:uppercase;font-size:.76rem;padding:1rem 1.3rem;border-radius:50px;transition:.25s;cursor:pointer}
   .btn-solid{background:var(--terra);color:var(--slate-deep)}
   .btn-solid:hover,.btn-solid:active{background:var(--terra-deep)}
   .btn-ghost{border:1px solid var(--line);color:var(--cream)}
@@ -55,18 +50,20 @@
   .scroll-hint{position:absolute;bottom:1.3rem;left:50%;transform:translateX(-50%);z-index:2;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-dim);animation:bob 2.4s ease-in-out infinite}
   @keyframes bob{0%,100%{transform:translate(-50%,0);opacity:.55}50%{transform:translate(-50%,7px);opacity:1}}
   @media(max-width:400px){.hero .mark{letter-spacing:.1em;padding-left:.1em}}
-
   section{padding:4.5rem 1.2rem;position:relative}
   .wrap{max-width:1080px;margin:0 auto}
-
   .about p{font-size:1.04rem;margin-bottom:1.1rem;max-width:60ch}
   .about .lead{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.35rem;color:var(--cream);line-height:1.5}
   .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.8rem}
   .tags span{font-family:"Josefin Sans",sans-serif;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-dim);border:1px solid var(--line);padding:.45rem .8rem;border-radius:40px}
-
   .menu{background:var(--slate-deep)}
   .menu-note{font-size:.9rem;margin-bottom:1.6rem;max-width:60ch}
   .menu-note b{color:var(--terra);font-weight:400}
+  .cta-wrap{margin-top:1.6rem}
+  .back{display:inline-flex;align-items:center;gap:.4rem;font-family:"Josefin Sans",sans-serif;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim);margin-bottom:1.4rem}
+  .back svg{width:14px;height:14px;stroke:var(--terra)}
+  .back:hover{color:var(--terra)}
+  .menu-page-top{padding-top:6.5rem}
   .tabs{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.9rem;margin-bottom:1.6rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .tabs::-webkit-scrollbar{display:none}
   .tabs button{flex:0 0 auto;white-space:nowrap;font-family:"Josefin Sans",sans-serif;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim);background:transparent;border:1px solid var(--line);padding:.6rem 1rem;border-radius:40px;cursor:pointer;transition:.2s}
@@ -82,12 +79,11 @@
   .dish .nm{color:var(--cream);font-weight:400;font-size:1.01rem}
   .dish .ds{display:block;color:var(--cream-dim);font-size:.84rem;font-weight:300;margin-top:.15rem}
   .dish .pr{font-family:"Josefin Sans",sans-serif;color:var(--terra);font-size:.92rem;font-weight:300;white-space:nowrap;flex:none}
-  .tag-veg,.tag-new,.note{font-family:"Josefin Sans",sans-serif;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;padding:.12em .45em;border-radius:30px;margin-left:.45em;vertical-align:middle}
+  .tag-veg,.tag-new,.note{font-family:"Josefin Sans",sans-serif;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;padding:.12em .45em;border-radius:30px;margin-left:.45em;vertical-align:middle;display:inline-block}
   .tag-veg{color:var(--olive);border:1px solid var(--olive)}
   .tag-new{color:var(--terra);border:1px solid var(--terra)}
   .note{color:var(--cream-dim);border:1px solid var(--line)}
   .legend{font-family:"Josefin Sans",sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-dim);margin-top:1.4rem;padding-top:1.1rem;border-top:1px solid var(--line)}
-
   .reviews{background:var(--slate);overflow:hidden}
   .rev-sub{font-size:.92rem;margin-bottom:1.4rem}
   .rev-track{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:.4rem .2rem 1.4rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
@@ -102,7 +98,6 @@
   .rev-nav button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--cream);cursor:pointer;display:grid;place-items:center;transition:.2s}
   .rev-nav button svg{width:18px;height:18px;stroke:currentColor}
   .rev-nav button:hover{background:var(--terra);color:var(--slate-deep);border-color:var(--terra)}
-
   .visit{background:var(--slate-deep)}
   .vcols{display:flex;flex-direction:column;gap:2.2rem;margin-top:1.5rem}
   .info-row{display:flex;gap:.9rem;align-items:flex-start;padding:.6rem 0}
@@ -116,52 +111,39 @@
   .hours-tbl td:last-child{text-align:right;color:var(--cream)}
   .hours-tbl tr.closed td:last-child{color:var(--terra-deep)}
   .hours-tbl tr.today td{color:var(--terra)!important}
-  .hours-tbl tr.today td:first-child::before{content:"● ";font-size:.6em;vertical-align:middle}
+  .hours-tbl tr.today td:first-child::before{content:"\25CF ";font-size:.6em;vertical-align:middle}
   .map-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;font-family:"Josefin Sans",sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terra)}
   .map-link svg{width:15px;height:15px;stroke:var(--terra)}
-
   .gallery .grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:1.5rem}
   .gallery figure{position:relative;overflow:hidden;border-radius:10px;aspect-ratio:1/1;background:var(--slate-soft)}
   .gallery figure.tall{grid-row:span 2;aspect-ratio:auto}
   .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
   .gallery figure:hover img,.gallery figure:active img{transform:scale(1.06)}
-
   footer{background:var(--slate);text-align:center;padding:3.2rem 1.2rem 7rem}
   footer .wm{font-size:2rem;display:inline-block;margin-bottom:1rem}
   footer .fmark{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--cream-dim);font-size:1.05rem}
   footer .fcontact{margin-top:1.3rem;font-size:.86rem;color:var(--cream-dim);line-height:1.9}
   footer .fcontact a:hover,footer .fcontact a:active{color:var(--terra)}
   footer .fine{margin-top:1.8rem;font-size:.66rem;letter-spacing:.06em;color:rgba(203,198,184,.45)}
-
   .mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:90;display:flex;background:rgba(51,51,61,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
-  .mobile-bar a{flex:1;text-align:center;padding:1rem;font-family:"Josefin Sans",sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:.5rem}
-  .mobile-bar a svg{width:15px;height:15px}
-  .mobile-bar .mb-call{color:var(--cream);border-right:1px solid var(--line)}
-  .mobile-bar .mb-call svg{stroke:var(--terra)}
-  .mobile-bar .mb-map{color:var(--terra)}
-  .mobile-bar .mb-map svg{stroke:var(--terra)}
-
+  .mobile-bar a{flex:1;text-align:center;padding:1rem .5rem;font-family:"Josefin Sans",sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:.45rem;color:var(--cream);border-right:1px solid var(--line)}
+  .mobile-bar a:last-child{border-right:none}
+  .mobile-bar a svg{width:15px;height:15px;stroke:var(--terra)}
+  .mobile-bar a.accent{color:var(--terra)}
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
   .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.scroll-hint{animation:none}html{scroll-behavior:auto}}
-
-  @media(min-width:680px){.hero-cta{flex-direction:row;max-width:none;justify-content:center}.gallery .grid{grid-template-columns:repeat(3,1fr)}.mobile-bar{display:none}footer{padding-bottom:3.2rem}.rev-card{flex-basis:46%}.call-btn{font-size:.7rem}}
+  @media(min-width:680px){.hero-cta{flex-direction:row;max-width:none;justify-content:center}.gallery .grid{grid-template-columns:repeat(3,1fr)}.mobile-bar{display:none}footer{padding-bottom:3.2rem}.rev-card{flex-basis:46%}.call-btn{font-size:.7rem}.menu-page-top{padding-top:8rem}}
   @media(min-width:920px){section{padding:6rem 2rem}.vcols{flex-direction:row;justify-content:space-between}.vcols>div{flex:1}.rev-card{flex-basis:31.5%}}
+
 </style>
 </head>
 <body>
-
   <header id="hdr">
     <span class="wm">Casa</span>
     <div class="hdr-right">
-      <div class="lang" role="group" aria-label="Language">
-        <button id="lang-en" type="button">EN</button>
-        <button id="lang-es" type="button">ES</button>
-      </div>
-      <a class="call-btn" href="tel:+19177477974">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.34a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92Z"/></svg>
-        <span data-i18n="nav_call">Call</span>
-      </a>
+      <div class="lang" role="group" aria-label="Language"><button id="lang-en" type="button">EN</button><button id="lang-es" type="button">ES</button></div>
+      <a class="call-btn" href="tel:+19177477974"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.34a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92Z"/></svg><span data-i18n="nav_call">Call</span></a>
     </div>
   </header>
 
@@ -172,9 +154,9 @@
       <div class="rule"></div>
       <p class="tag" data-i18n="hero_tag"></p>
       <p class="sub" data-i18n="hero_sub"></p>
-      <div class="stars"><b>★ 4.8</b> Google · <b>★ 5.0</b> Tripadvisor</div>
+      <div class="stars"><b>&#9733; 4.8</b> Google · <b>&#9733; 5.0</b> Tripadvisor</div>
       <div class="hero-cta">
-        <a class="btn btn-solid" href="#menu" data-i18n="hero_btn_menu"></a>
+        <a class="btn btn-solid" href="menu.html" data-i18n="hero_btn_menu"></a>
         <a class="btn btn-ghost" href="tel:+19177477974" data-i18n="hero_btn_reserve"></a>
       </div>
     </div>
@@ -188,11 +170,7 @@
       <p class="lead" data-i18n="about_lead"></p>
       <p data-i18n="about_p2"></p>
       <p data-i18n="about_p3"></p>
-      <div class="tags">
-        <span data-i18n="tag_family"></span><span data-i18n="tag_open"></span><span data-i18n="tag_takeout"></span>
-        <span data-i18n="tag_wine"></span><span data-i18n="tag_res"></span><span data-i18n="tag_wifi"></span>
-        <span data-i18n="tag_dog"></span><span data-i18n="tag_cards"></span><span data-i18n="tag_wheel"></span>
-      </div>
+      <div class="tags"><span data-i18n="tag_family"></span><span data-i18n="tag_open"></span><span data-i18n="tag_takeout"></span><span data-i18n="tag_wine"></span><span data-i18n="tag_res"></span><span data-i18n="tag_wifi"></span><span data-i18n="tag_dog"></span><span data-i18n="tag_cards"></span><span data-i18n="tag_wheel"></span></div>
     </div>
   </section>
 
@@ -200,9 +178,8 @@
     <div class="wrap reveal">
       <span class="eyebrow" data-i18n="menu_eyebrow"></span>
       <h2 data-i18n="menu_h2"></h2>
-      <p class="menu-note" data-i18n="menu_note"></p>
-      <div class="tabs" id="tabs"></div>
-      <div id="menu-panel"></div>
+      <p class="menu-note" data-i18n="menu_teaser"></p>
+      <div class="cta-wrap"><a class="btn btn-solid" href="menu.html" data-i18n="menu_cta"></a></div>
     </div>
   </section>
 
@@ -212,16 +189,13 @@
       <h2 data-i18n="rev_h2"></h2>
       <p class="rev-sub" data-i18n="rev_sub"></p>
       <div class="rev-track" id="rev-track">
-        <article class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="rev1"></p><div class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg><span data-i18n="rev_src"></span></div></article>
-        <article class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="rev2"></p><div class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg><span data-i18n="rev_src"></span></div></article>
-        <article class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="rev3"></p><div class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg><span data-i18n="rev_src"></span></div></article>
-        <article class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="rev4"></p><div class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg><span data-i18n="rev_src"></span></div></article>
-        <article class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-i18n="rev5"></p><div class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg><span data-i18n="rev_src"></span></div></article>
+        <article class="rev-card"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rev-text" data-i18n="rev1"></p><div class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg><span data-i18n="rev_src"></span></div></article>
+        <article class="rev-card"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rev-text" data-i18n="rev2"></p><div class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg><span data-i18n="rev_src"></span></div></article>
+        <article class="rev-card"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rev-text" data-i18n="rev3"></p><div class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg><span data-i18n="rev_src"></span></div></article>
+        <article class="rev-card"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rev-text" data-i18n="rev4"></p><div class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg><span data-i18n="rev_src"></span></div></article>
+        <article class="rev-card"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rev-text" data-i18n="rev5"></p><div class="rev-src"><svg viewBox="0 0 24 24" fill="none" stroke="var(--terra)" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg><span data-i18n="rev_src"></span></div></article>
       </div>
-      <div class="rev-nav">
-        <button id="rev-prev" type="button" data-i18n-aria="rev_prev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
-        <button id="rev-next" type="button" data-i18n-aria="rev_next"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
-      </div>
+      <div class="rev-nav"><button id="rev-prev" type="button" data-i18n-aria="rev_prev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button><button id="rev-next" type="button" data-i18n-aria="rev_next"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button></div>
     </div>
   </section>
 
@@ -246,35 +220,22 @@
       <h2 data-i18n="visit_h2"></h2>
       <div class="vcols">
         <div>
-          <div class="info-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div><div class="k" data-i18n="visit_find"></div><div class="v" data-i18n="visit_addr"></div></div>
-          </div>
-          <div class="info-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.34a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92Z"/></svg>
-            <div><div class="k" data-i18n="visit_phone"></div><a class="v" href="tel:+19177477974">+1 917-747-7974</a></div>
-          </div>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=CASA+Mediterranean+Bah%C3%ADa+Xcacel+B9+Puerto+Aventuras" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
-            <span data-i18n="visit_map"></span>
-          </a>
+          <div class="info-row"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="k" data-i18n="visit_find"></div><div class="v" data-i18n="visit_addr"></div></div></div>
+          <div class="info-row"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.34a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92Z"/></svg><div><div class="k" data-i18n="visit_phone"></div><a class="v" href="tel:+19177477974">+1 917-747-7974</a></div></div>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=CASA+Mediterranean+Bah%C3%ADa+Xcacel+B9+Puerto+Aventuras" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg><span data-i18n="visit_map"></span></a>
         </div>
         <div>
-          <div class="info-row" style="align-items:flex-start">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <div style="flex:1">
-              <div class="k" data-i18n="visit_hours"></div>
-              <table class="hours-tbl" id="hours">
-                <tr data-d="0"><td data-i18n="day_sun"></td><td data-i18n="h_open"></td></tr>
-                <tr data-d="1" class="closed"><td data-i18n="day_mon"></td><td data-i18n="h_closed"></td></tr>
-                <tr data-d="2"><td data-i18n="day_tue"></td><td data-i18n="h_open"></td></tr>
-                <tr data-d="3"><td data-i18n="day_wed"></td><td data-i18n="h_open"></td></tr>
-                <tr data-d="4"><td data-i18n="day_thu"></td><td data-i18n="h_open"></td></tr>
-                <tr data-d="5"><td data-i18n="day_fri"></td><td data-i18n="h_open"></td></tr>
-                <tr data-d="6"><td data-i18n="day_sat"></td><td data-i18n="h_open"></td></tr>
-              </table>
-            </div>
-          </div>
+          <div class="info-row" style="align-items:flex-start"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div style="flex:1"><div class="k" data-i18n="visit_hours"></div>
+            <table class="hours-tbl" id="hours">
+              <tr data-d="0"><td data-i18n="day_sun"></td><td data-i18n="h_open"></td></tr>
+              <tr data-d="1" class="closed"><td data-i18n="day_mon"></td><td data-i18n="h_closed"></td></tr>
+              <tr data-d="2"><td data-i18n="day_tue"></td><td data-i18n="h_open"></td></tr>
+              <tr data-d="3"><td data-i18n="day_wed"></td><td data-i18n="h_open"></td></tr>
+              <tr data-d="4"><td data-i18n="day_thu"></td><td data-i18n="h_open"></td></tr>
+              <tr data-d="5"><td data-i18n="day_fri"></td><td data-i18n="h_open"></td></tr>
+              <tr data-d="6"><td data-i18n="day_sat"></td><td data-i18n="h_open"></td></tr>
+            </table>
+          </div></div>
         </div>
       </div>
     </div>
@@ -288,21 +249,15 @@
   </footer>
 
   <nav class="mobile-bar">
-    <a class="mb-call" href="tel:+19177477974">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.34a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92Z"/></svg>
-      <span data-i18n="mb_call"></span>
-    </a>
-    <a class="mb-map" href="https://www.google.com/maps/search/?api=1&query=CASA+Mediterranean+Bah%C3%ADa+Xcacel+B9+Puerto+Aventuras" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-      <span data-i18n="mb_map"></span>
-    </a>
+    <a class="accent" href="menu.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 5h18M3 12h18M3 19h18"/></svg><span data-i18n="mb_menu"></span></a>
+    <a href="tel:+19177477974"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.34a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92Z"/></svg><span data-i18n="mb_call"></span></a>
+    <a href="https://www.google.com/maps/search/?api=1&query=CASA+Mediterranean+Bah%C3%ADa+Xcacel+B9+Puerto+Aventuras" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="mb_map"></span></a>
   </nav>
 
 <script>
-/* ============ UI STRINGS ============ */
 var I18N = {
   en:{
-    nav_call:"Call",
+    nav_call:"Call", nav_menu:"Menu",
     hero_tag:"Real food, made with love — a little house with two big hearts.",
     hero_sub:"Mediterranean tapas · natural wine bar · French-style rotisserie<br>Puerto Aventuras, Riviera Maya",
     hero_btn_menu:"View the menu", hero_btn_reserve:"Reserve · Order", scroll:"scroll",
@@ -312,7 +267,9 @@ var I18N = {
     about_p3:"We serve breakfast, lunch and dinner every day except Mondays, and we're famous for Mediterranean-style tapas, a thoughtfully curated natural wine bar, juicy French-style rotisserie chickens, and daily specials.",
     tag_family:"Family-run",tag_open:"Open-air",tag_takeout:"Takeout",tag_wine:"Natural wine",tag_res:"Reservations",tag_wifi:"Free Wi-Fi",tag_dog:"Dog-friendly",tag_cards:"Cards accepted",tag_wheel:"Wheelchair access",
     menu_eyebrow:"What we serve", menu_h2:"The Menu",
-    menu_note:"A pan-Mediterranean table built on simple, fresh ingredients. <b>All prices in Mexican pesos (MXN $).</b>",
+    menu_teaser:"A pan-Mediterranean table — Italian, Greek, Levantine and Middle-Eastern flavours, a natural wine bar, French-style rotisserie and daily specials.",
+    menu_cta:"View full menu", menu_note:"A pan-Mediterranean table built on simple, fresh ingredients. <b>All prices in Mexican pesos (MXN $).</b>",
+    back_home:"Back to home",
     rev_eyebrow:"In their words", rev_h2:"Guest reviews", rev_sub:"Real five-star reviews from Google.",
     rev_src:"Verified Google review", rev_prev:"Previous review", rev_next:"Next review",
     rev1:"Outstanding from start to finish. <q>Everything we tried was executed to a high degree</q> — the Osso Bucco, the Persian chicken, the smash burger, the brownie. Upscale but relaxed, and packed with flavour.",
@@ -322,275 +279,214 @@ var I18N = {
     rev5:"We order out almost every day and stop by for a smoothie or a warm chat. The ossobuco, the lamb, the roasted sweet potatoes and the smoothie bowls are above and beyond. The almond croissants are <q>the best I've ever tried</q>.",
     gal_eyebrow:"From the kitchen", gal_h2:"A look inside",
     visit_eyebrow:"Come say hi", visit_h2:"Visit CASA",
-    visit_find:"Find us", visit_addr:"Bahía Xcacel, Local B9<br>Puerto Aventuras 77733<br>Quintana Roo, Mexico",
+    visit_find:"Find us", visit_addr:"Bah\u00eda Xcacel, Local B9<br>Puerto Aventuras 77733<br>Quintana Roo, Mexico",
     visit_phone:"Phone · Reservations · Takeout", visit_map:"Open in Google Maps", visit_hours:"Hours",
     day_sun:"Sunday",day_mon:"Monday",day_tue:"Tuesday",day_wed:"Wednesday",day_thu:"Thursday",day_fri:"Friday",day_sat:"Saturday",
-    h_open:"8:00 AM – 10:30 PM", h_closed:"Closed",
+    h_open:"8:00 AM \u2013 10:30 PM", h_closed:"Closed",
     foot_mark:"Mi casa es su casa.",
-    foot_contact:"Bahía Xcacel, Local B9 · Puerto Aventuras 77733, Q.R., Mexico<br><a href=\"tel:+19177477974\">+1 917-747-7974</a> · Open Tue–Sun · Closed Mondays",
-    foot_fine:"© 2026 CASA — Mediterranean Food &amp; Wine. Made with real ingredients.",
-    mb_call:"Call us", mb_map:"Directions",
+    foot_contact:"Bah\u00eda Xcacel, Local B9 · Puerto Aventuras 77733, Q.R., Mexico<br><a href=\"tel:+19177477974\">+1 917-747-7974</a> · Open Tue\u2013Sun · Closed Mondays",
+    foot_fine:"\u00a9 2026 CASA — Mediterranean Food &amp; Wine. Made with real ingredients.",
+    mb_call:"Call", mb_map:"Map", mb_menu:"Menu",
     new_label:"New", legend:"N = Natural · O = Organic · B = Biodynamic"
   },
   es:{
-    nav_call:"Llamar",
+    nav_call:"Llamar", nav_menu:"Menú",
     hero_tag:"Comida de verdad, hecha con amor — una casita con dos grandes corazones.",
-    hero_sub:"Tapas mediterráneas · bar de vinos naturales · rosticería al estilo francés<br>Puerto Aventuras, Riviera Maya",
-    hero_btn_menu:"Ver el menú", hero_btn_reserve:"Reservar · Ordenar", scroll:"desliza",
+    hero_sub:"Tapas mediterr\u00e1neas · bar de vinos naturales · rosticer\u00eda al estilo franc\u00e9s<br>Puerto Aventuras, Riviera Maya",
+    hero_btn_menu:"Ver el men\u00fa", hero_btn_reserve:"Reservar · Ordenar", scroll:"desliza",
     about_eyebrow:"Nuestra casa, tu casa", about_h2:"Mi casa<br>es su casa.",
-    about_lead:"CASA es el hogar de la \u201Ccomida de verdad\u201D en Puerto Aventuras — hecha con productos de la más alta calidad, para comer aquí o llevar.",
-    about_p2:"Un asunto de familia, con apenas un puñado de mesas y dos grandes corazones detrás de cada platillo. El chef Nima y su hija Clara te reciben en su cocina al aire libre, donde la brisa del mar entra de día y el aire cálido de la noche llega al atardecer. Sin puertas, sin complicaciones — solo cocina honesta y buena compañía.",
-    about_p3:"Servimos desayuno, comida y cena todos los días excepto los lunes, y somos famosos por nuestras tapas de estilo mediterráneo, un bar de vinos naturales cuidadosamente seleccionado, jugosos pollos rostizados al estilo francés y especiales del día.",
+    about_lead:"CASA es el hogar de la \u201Ccomida de verdad\u201D en Puerto Aventuras — hecha con productos de la m\u00e1s alta calidad, para comer aqu\u00ed o llevar.",
+    about_p2:"Un asunto de familia, con apenas un pu\u00f1ado de mesas y dos grandes corazones detr\u00e1s de cada platillo. El chef Nima y su hija Clara te reciben en su cocina al aire libre, donde la brisa del mar entra de d\u00eda y el aire c\u00e1lido de la noche llega al atardecer. Sin puertas, sin complicaciones — solo cocina honesta y buena compa\u00f1\u00eda.",
+    about_p3:"Servimos desayuno, comida y cena todos los d\u00edas excepto los lunes, y somos famosos por nuestras tapas de estilo mediterr\u00e1neo, un bar de vinos naturales cuidadosamente seleccionado, jugosos pollos rostizados al estilo franc\u00e9s y especiales del d\u00eda.",
     tag_family:"De familia",tag_open:"Al aire libre",tag_takeout:"Para llevar",tag_wine:"Vino natural",tag_res:"Reservaciones",tag_wifi:"Wi-Fi gratis",tag_dog:"Pet-friendly",tag_cards:"Aceptamos tarjetas",tag_wheel:"Acceso para silla de ruedas",
-    menu_eyebrow:"Lo que servimos", menu_h2:"El Menú",
-    menu_note:"Una mesa panmediterránea sobre ingredientes simples y frescos. <b>Todos los precios en pesos mexicanos (MXN $).</b>",
-    rev_eyebrow:"En sus palabras", rev_h2:"Lo que dicen", rev_sub:"Reseñas reales de cinco estrellas en Google.",
-    rev_src:"Reseña verificada de Google", rev_prev:"Reseña anterior", rev_next:"Siguiente reseña",
-    rev1:"Excepcional de principio a fin. <q>Todo lo que probamos estaba a un nivel altísimo</q> — el Osso Bucco, el pollo persa, la smash burger, el brownie. Elegante pero relajado, y lleno de sabor.",
-    rev2:"<q>La calidad de los ingredientes es increíble</q>, y la variedad es asombrosa. Vine a desayunar, comer y cenar, y siempre salí satisfecho. El hummus y la burrata son el inicio perfecto — se siente como en casa.",
-    rev3:"Nos encanta este lugar mediterráneo. Céntrico, con <q>dueños amables y eficientes</q> y platillos deliciosos para comer aquí o llevar. El tagine de cordero, el falafel, las pitas y el famoso pollo rostizado — generosos y deliciosos.",
+    menu_eyebrow:"Lo que servimos", menu_h2:"El Men\u00fa",
+    menu_teaser:"Una mesa panmediterr\u00e1nea — sabores italianos, griegos, levantinos y de Medio Oriente, un bar de vinos naturales, rosticer\u00eda al estilo franc\u00e9s y especiales del d\u00eda.",
+    menu_cta:"Ver men\u00fa completo", menu_note:"Una mesa panmediterr\u00e1nea sobre ingredientes simples y frescos. <b>Todos los precios en pesos mexicanos (MXN $).</b>",
+    back_home:"Volver al inicio",
+    rev_eyebrow:"En sus palabras", rev_h2:"Lo que dicen", rev_sub:"Rese\u00f1as reales de cinco estrellas en Google.",
+    rev_src:"Rese\u00f1a verificada de Google", rev_prev:"Rese\u00f1a anterior", rev_next:"Siguiente rese\u00f1a",
+    rev1:"Excepcional de principio a fin. <q>Todo lo que probamos estaba a un nivel alt\u00edsimo</q> — el Osso Bucco, el pollo persa, la smash burger, el brownie. Elegante pero relajado, y lleno de sabor.",
+    rev2:"<q>La calidad de los ingredientes es incre\u00edble</q>, y la variedad es asombrosa. Vine a desayunar, comer y cenar, y siempre sal\u00ed satisfecho. El hummus y la burrata son el inicio perfecto — se siente como en casa.",
+    rev3:"Nos encanta este lugar mediterr\u00e1neo. C\u00e9ntrico, con <q>due\u00f1os amables y eficientes</q> y platillos deliciosos para comer aqu\u00ed o llevar. El tagine de cordero, el falafel, las pitas y el famoso pollo rostizado — generosos y deliciosos.",
     rev4:"No es solo un restaurante — es un hogar fuera de las paredes. Una casita de apenas ocho mesas y <q>dos grandes corazones</q>. Con su encanto al aire libre y la brisa del mar, no solo comes — llegas.",
-    rev5:"Pedimos para llevar casi a diario y pasamos por un smoothie o una charla cálida. El ossobuco, el cordero, los camotes asados y los smoothie bowls son extraordinarios. Los croissants de almendra son <q>los mejores que he probado</q>.",
+    rev5:"Pedimos para llevar casi a diario y pasamos por un smoothie o una charla c\u00e1lida. El ossobuco, el cordero, los camotes asados y los smoothie bowls son extraordinarios. Los croissants de almendra son <q>los mejores que he probado</q>.",
     gal_eyebrow:"Desde la cocina", gal_h2:"Una mirada adentro",
-    visit_eyebrow:"Ven a saludar", visit_h2:"Visítanos",
-    visit_find:"Encuéntranos", visit_addr:"Bahía Xcacel, Local B9<br>Puerto Aventuras 77733<br>Quintana Roo, México",
-    visit_phone:"Teléfono · Reservaciones · Para llevar", visit_map:"Abrir en Google Maps", visit_hours:"Horario",
-    day_sun:"Domingo",day_mon:"Lunes",day_tue:"Martes",day_wed:"Miércoles",day_thu:"Jueves",day_fri:"Viernes",day_sat:"Sábado",
-    h_open:"8:00 – 22:30", h_closed:"Cerrado",
+    visit_eyebrow:"Ven a saludar", visit_h2:"Vis\u00edtanos",
+    visit_find:"Encu\u00e9ntranos", visit_addr:"Bah\u00eda Xcacel, Local B9<br>Puerto Aventuras 77733<br>Quintana Roo, M\u00e9xico",
+    visit_phone:"Tel\u00e9fono · Reservaciones · Para llevar", visit_map:"Abrir en Google Maps", visit_hours:"Horario",
+    day_sun:"Domingo",day_mon:"Lunes",day_tue:"Martes",day_wed:"Mi\u00e9rcoles",day_thu:"Jueves",day_fri:"Viernes",day_sat:"S\u00e1bado",
+    h_open:"8:00 \u2013 22:30", h_closed:"Cerrado",
     foot_mark:"Mi casa es su casa.",
-    foot_contact:"Bahía Xcacel, Local B9 · Puerto Aventuras 77733, Q.R., México<br><a href=\"tel:+19177477974\">+1 917-747-7974</a> · Abierto mar–dom · Cerrado los lunes",
-    foot_fine:"© 2026 CASA — Comida Mediterránea y Vinos. Hecho con ingredientes de verdad.",
-    mb_call:"Llámanos", mb_map:"Cómo llegar",
-    new_label:"Nuevo", legend:"N = Natural · O = Orgánico · B = Biodinámico"
+    foot_contact:"Bah\u00eda Xcacel, Local B9 · Puerto Aventuras 77733, Q.R., M\u00e9xico<br><a href=\"tel:+19177477974\">+1 917-747-7974</a> · Abierto mar\u2013dom · Cerrado los lunes",
+    foot_fine:"\u00a9 2026 CASA — Comida Mediterr\u00e1nea y Vinos. Hecho con ingredientes de verdad.",
+    mb_call:"Llamar", mb_map:"Mapa", mb_menu:"Men\u00fa",
+    new_label:"Nuevo", legend:"N = Natural · O = Org\u00e1nico · B = Biodin\u00e1mico"
   }
 };
 
-/* ============ FULL MENU DATA (prices in MXN) ============ */
-/* food item: [en, es, descEN, descES, price, tag('veg'|'new'|'')] */
-/* drink item: {n:name, d:detail, p:price, note:'N/O'} */
 var MENU = [
   { id:"tapas", tab:{en:"Tapas",es:"Tapas"}, title:{en:"Tapas / Appetizers",es:"Tapas / Aperitivos"}, type:"food", blocks:[{ items:[
     ["Homemade Hummus, Pita & Lebanese pickles OR Olives","Hummus casero, pita y encurtidos libaneses O aceitunas","","","260",""],
-    ["Falafel Plate with Hummus, Tzatziki, Israeli Salad & Pickles","Plato de falafel con hummus, tzatziki, ensalada israelí y encurtidos","","","300",""],
-    ["Zucchini Carpaccio with Mint & Italian Parmesan Reggiano","Carpaccio de calabacín con menta y parmesano Reggiano italiano","","","290","new"],
+    ["Falafel Plate with Hummus, Tzatziki, Israeli Salad & Pickles","Plato de falafel con hummus, tzatziki, ensalada israel\u00ed y encurtidos","","","300",""],
+    ["Zucchini Carpaccio with Mint & Italian Parmesan Reggiano","Carpaccio de calabac\u00edn con menta y parmesano Reggiano italiano","","","290","new"],
     ["Stuffed Vine Leaves with Tzatziki & Sprouts","Hojas de parra rellenas con tzatziki y germinados","","","290",""],
     ["Greek Salad with Seared Cheese & Kalamata Olives","Ensalada griega con queso sellado y aceitunas Kalamata","","","300","new"],
-    ["Meatballs with Tzatziki","Albóndigas con tzatziki","","","300",""],
+    ["Meatballs with Tzatziki","Alb\u00f3ndigas con tzatziki","","","300",""],
     ["Fresh Handmade Burrata with Heirloom Cherry Tomatoes & Basil","Burrata fresca hecha a mano con tomates cherry heirloom y albahaca","","","345",""],
-    ["Roasted Beets with Fresh Stracciatella & Arugula","Betabel rostizado con stracciatella fresca y arúgula","","","365",""],
-    ["Shrimp with Garlic & Lemon","Camarones al ajo y limón","","","370",""],
+    ["Roasted Beets with Fresh Stracciatella & Arugula","Betabel rostizado con stracciatella fresca y ar\u00fagula","","","365",""],
+    ["Shrimp with Garlic & Lemon","Camarones al ajo y lim\u00f3n","","","370",""],
     ["Octopus with Paprika & Garlic","Pulpo con paprika y ajo","","","380",""]
   ]}]},
-
   { id:"mains", tab:{en:"Mains",es:"Fuertes"}, title:{en:"Main Courses",es:"Platos Fuertes"}, type:"food", blocks:[{ items:[
-    ["Pasta with Homemade Tomato & Basil Sauce","Pasta con salsa casera de tomate y albahaca","+ Fresh Burrata / Stracciatella 110 · + Meatballs 100","+ Burrata / Stracciatella fresca 110 · + Albóndigas 100","250",""],
-    ["Roasted Cauliflower on Beet Purée","Coliflor rostizada sobre puré de betabel","","","300","veg"],
-    ["Chicken Milanese with Arugula & Cherry Tomato Salad","Milanesa de pollo con ensalada de arúgula y tomate cherry","","","340",""],
-    ["Persian Chicken with Organic Quinoa Tabouli","Pollo persa con tabule de quinoa orgánica","saffron, lemon & garlic","azafrán, limón y ajo","340",""],
-    ["Lamb Shawarma Platter","Plato de shawarma de cordero","with tzatziki, organic quinoa tabouli & pickles","con tzatziki, tabule de quinoa orgánica y encurtidos","480",""],
-    ["Beef Ossobuco with Carrots & Couscous","Ossobuco de res con zanahorias y cuscús","","","480",""],
-    ["Salmon with Sweet Potato Purée & Sautéed Asparagus","Salmón con puré de camote y espárragos salteados","","","490","new"],
+    ["Pasta with Homemade Tomato & Basil Sauce","Pasta con salsa casera de tomate y albahaca","+ Fresh Burrata / Stracciatella 110 · + Meatballs 100","+ Burrata / Stracciatella fresca 110 · + Alb\u00f3ndigas 100","250",""],
+    ["Roasted Cauliflower on Beet Pur\u00e9e","Coliflor rostizada sobre pur\u00e9 de betabel","","","300","veg"],
+    ["Chicken Milanese with Arugula & Cherry Tomato Salad","Milanesa de pollo con ensalada de ar\u00fagula y tomate cherry","","","340",""],
+    ["Persian Chicken with Organic Quinoa Tabouli","Pollo persa con tabule de quinoa org\u00e1nica","saffron, lemon & garlic","azafr\u00e1n, lim\u00f3n y ajo","340",""],
+    ["Lamb Shawarma Platter","Plato de shawarma de cordero","with tzatziki, organic quinoa tabouli & pickles","con tzatziki, tabule de quinoa org\u00e1nica y encurtidos","480",""],
+    ["Beef Ossobuco with Carrots & Couscous","Ossobuco de res con zanahorias y cusc\u00fas","","","480",""],
+    ["Salmon with Sweet Potato Pur\u00e9e & Saut\u00e9ed Asparagus","Salm\u00f3n con pur\u00e9 de camote y esp\u00e1rragos salteados","","","490","new"],
     ["Angus Beef Ribeye Steak & Fries","Rib eye de res Angus con papas a la francesa","16oz / USDA","16oz / USDA","800",""],
     ["CASA Angus Beef Smashburger & Cheese + Fries","Smashburger CASA de res Angus con queso + papas","Double +80 · Manchego +30","Doble +80 · Manchego +30","295",""]
   ]}]},
-
   { id:"specials", tab:{en:"Specials",es:"Especiales"}, title:{en:"Specials",es:"Especiales"}, type:"food", blocks:[{ items:[
     ["Greek Salad with Seared Cheese & Kalamata Olives","Ensalada griega con queso sellado y aceitunas Kalamata","","","290",""],
-    ["Zucchini Carpaccio with Mint & Italian Parmesan Reggiano","Carpaccio de calabacín con menta y parmesano Reggiano italiano","","","290",""],
+    ["Zucchini Carpaccio with Mint & Italian Parmesan Reggiano","Carpaccio de calabac\u00edn con menta y parmesano Reggiano italiano","","","290",""],
     ["Steak Frites — 16oz Rib Eye","Steak frites — Rib eye 16oz","USDA Angus Beef","Res Angus USDA","800",""],
-    ["Whole Roasted Fish (Mediterranean Style)","Pescado entero rostizado (estilo mediterráneo)","price per 100g","precio por 100g","120 / 100g",""]
+    ["Whole Roasted Fish (Mediterranean Style)","Pescado entero rostizado (estilo mediterr\u00e1neo)","price per 100g","precio por 100g","120 / 100g",""]
   ]}]},
-
   { id:"sides", tab:{en:"Sides",es:"Guarniciones"}, title:{en:"Sides & Salads",es:"Guarniciones y Ensaladas"}, type:"food", blocks:[{ items:[
     ["French Fries OR Sweet Potato Fries","Papas a la francesa O papas de camote","","","110","veg"],
-    ["Arugula & Cherry Tomato Salad","Ensalada de arúgula y tomate cherry","","","130","veg"],
+    ["Arugula & Cherry Tomato Salad","Ensalada de ar\u00fagula y tomate cherry","","","130","veg"],
     ["Mixed Roasted Vegetables","Verduras rostizadas mixtas","beet, carrot, sweet potato","betabel, zanahoria, camote","175","veg"],
-    ["Organic Quinoa Tabouli","Tabule de quinoa orgánica","","","175","veg"],
+    ["Organic Quinoa Tabouli","Tabule de quinoa org\u00e1nica","","","175","veg"],
     ["Smashed Persian Cucumber Salad with Mint","Ensalada de pepino persa machacado con menta","","","185","veg"]
   ]}]},
-
-  { id:"rotisserie", tab:{en:"Rotisserie",es:"Rosticería"}, title:{en:"French-style Rotisserie Chicken",es:"Pollo Rostizado al Estilo Francés"}, type:"food", blocks:[{ items:[
+  { id:"rotisserie", tab:{en:"Rotisserie",es:"Rosticer\u00eda"}, title:{en:"French-style Rotisserie Chicken",es:"Pollo Rostizado al Estilo Franc\u00e9s"}, type:"food", blocks:[{ items:[
     ["1/2 Chicken + 2 sides of choice","1/2 pollo + 2 guarniciones a elegir","","","550",""],
     ["Whole Chicken + 3 sides of choice","Pollo entero + 3 guarniciones a elegir","","","800",""]
   ]}]},
-
-  { id:"kids", tab:{en:"Kids",es:"Niños"}, title:{en:"Kid's Menu",es:"Menú Infantil"}, type:"food", blocks:[{ items:[
+  { id:"kids", tab:{en:"Kids",es:"Ni\u00f1os"}, title:{en:"Kid's Menu",es:"Men\u00fa Infantil"}, type:"food", blocks:[{ items:[
     ["Junior Smash Burger & French Fries","Junior smash burger y papas a la francesa","Angus Beef","Res Angus","210",""],
-    ["Meatballs & Pita","Albóndigas y pita","","","210",""],
+    ["Meatballs & Pita","Alb\u00f3ndigas y pita","","","210",""],
     ["Chicken Nuggets & French Fries","Nuggets de pollo y papas a la francesa","","","210",""]
   ]}]},
-
   { id:"desserts", tab:{en:"Desserts",es:"Postres"}, title:{en:"Desserts",es:"Postres"}, type:"food", blocks:[{ items:[
-    ["Banana Bread & Ice Cream","Pan de plátano y helado","gluten free","sin gluten","190",""],
+    ["Banana Bread & Ice Cream","Pan de pl\u00e1tano y helado","gluten free","sin gluten","190",""],
     ["Brownie & Ice Cream","Brownie y helado","","","190",""],
     ["Ice Cream (2 scoops)","Helado (2 bolas)","","","150",""]
   ]}]},
-
   { id:"drinks", tab:{en:"Drinks & Wine",es:"Bebidas y Vinos"}, title:{en:"Drinks & Wine",es:"Bebidas y Vinos"}, type:"drink", legend:true, blocks:[
-    { sub:{en:"Cocktails",es:"Cócteles"}, items:[
-      {n:"Mezcalita", p:"210"}, {n:"Margarita", p:"210"}
-    ]},
+    { sub:{en:"Cocktails",es:"C\u00f3cteles"}, items:[ {n:"Mezcalita", p:"210"}, {n:"Margarita", p:"210"} ]},
     { sub:{en:"Wine by the Glass · White",es:"Vino por copa · Blanco"}, items:[
       {n:"Clos Roussely — Sauvignon Blanc \u201CL'Escale\u201D 2023", d:"Loire, France", p:"240", note:"N/O"},
-      {n:"Valori — Pecorino 2022", d:"Abruzzo, Italy", p:"240", note:"O/B"}
-    ]},
-    { sub:{en:"Wine by the Glass · Rosé",es:"Vino por copa · Rosado"}, items:[
-      {n:"Domaine des Mesclances — Charmes 2024", d:"Provence, France", p:"240", note:"O"}
-    ]},
+      {n:"Valori — Pecorino 2022", d:"Abruzzo, Italy", p:"240", note:"O/B"} ]},
+    { sub:{en:"Wine by the Glass · Ros\u00e9",es:"Vino por copa · Rosado"}, items:[
+      {n:"Domaine des Mesclances — Charmes 2024", d:"Provence, France", p:"240", note:"O"} ]},
     { sub:{en:"Wine by the Glass · Red",es:"Vino por copa · Tinto"}, items:[
-      {n:"Vignerons d'Estézargues — Cuvée des Galets 2022", d:"Côtes du Rhône, France", p:"220", note:"N/O"},
-      {n:"Tenuta del Morer — Pinot Noir 2024", d:"Isonzo, Italy", p:"240", note:"O"}
-    ]},
+      {n:"Vignerons d'Est\u00e9zargues — Cuv\u00e9e des Galets 2022", d:"C\u00f4tes du Rh\u00f4ne, France", p:"220", note:"N/O"},
+      {n:"Tenuta del Morer — Pinot Noir 2024", d:"Isonzo, Italy", p:"240", note:"O"} ]},
     { sub:{en:"Wine by the Bottle · White",es:"Vino por botella · Blanco"}, items:[
       {n:"Nifo Sarrapochiello — Falanghina \u201CFutur\u201D 2023", d:"Campania, Italy", p:"840", note:"O/B"},
       {n:"Clos Roussely — Sauvignon Blanc \u201CL'Escale\u201D 2023", d:"Loire, France", p:"950", note:"N/O"},
       {n:"Rouvalis — Asprolithi 2024", d:"Peloponnese, Greece", p:"950", note:"O"},
       {n:"Valori — Pecorino 2022", d:"Abruzzo, Italy", p:"970", note:"O/B"},
       {n:"Petilia — Tarantella 2022", d:"Campania, Italy", p:"1150", note:"N/O"},
-      {n:"Domaine de la Mongestine — Bob Singlar 2023", d:"Provence, France", p:"1150", note:"N/O/B"}
-    ]},
-    { sub:{en:"Wine by the Bottle · Rosé",es:"Vino por botella · Rosado"}, items:[
+      {n:"Domaine de la Mongestine — Bob Singlar 2023", d:"Provence, France", p:"1150", note:"N/O/B"} ]},
+    { sub:{en:"Wine by the Bottle · Ros\u00e9",es:"Vino por botella · Rosado"}, items:[
       {n:"Domaine des Mesclances — Charmes 2023", d:"Provence, France", p:"950", note:"O"},
-      {n:"Domaine de la Mongestine — Bob Singlar Rosé 2022", d:"Provence, France", p:"1150", note:"N/O/B"}
-    ]},
+      {n:"Domaine de la Mongestine — Bob Singlar Ros\u00e9 2022", d:"Provence, France", p:"1150", note:"N/O/B"} ]},
     { sub:{en:"Wine by the Bottle · Orange",es:"Vino por botella · Naranja"}, items:[
-      {n:"João Tavares de Pina — Rufia Orange 2024", d:"Dão, Portugal", p:"1100", note:"N/O/B"},
-      {n:"Sébastien David — Chardonnay \u201CCouple Goals\u201D (1L) 2022", d:"Loire, France", p:"1200", note:"N/O/B"},
-      {n:"Domaine de la Mongestine — Bob Singlar Orange 2024", d:"Provence, France", p:"1150", note:"N/O/B"}
-    ]},
+      {n:"Jo\u00e3o Tavares de Pina — Rufia Orange 2024", d:"D\u00e3o, Portugal", p:"1100", note:"N/O/B"},
+      {n:"S\u00e9bastien David — Chardonnay \u201CCouple Goals\u201D (1L) 2022", d:"Loire, France", p:"1200", note:"N/O/B"},
+      {n:"Domaine de la Mongestine — Bob Singlar Orange 2024", d:"Provence, France", p:"1150", note:"N/O/B"} ]},
     { sub:{en:"Wine by the Bottle · Red",es:"Vino por botella · Tinto"}, items:[
       {n:"Fish Hoek — Pinotage 2023", d:"Western Cape, South Africa", p:"720", note:""},
-      {n:"Vignerons d'Estézargues — Cuvée des Galets 2023", d:"Côtes du Rhône, France", p:"840", note:"N/O"},
-      {n:"François Lurton — Lá Lá & Lá 2023", d:"Languedoc, France", p:"850", note:"O"},
+      {n:"Vignerons d'Est\u00e9zargues — Cuv\u00e9e des Galets 2023", d:"C\u00f4tes du Rh\u00f4ne, France", p:"840", note:"N/O"},
+      {n:"Fran\u00e7ois Lurton — L\u00e1 L\u00e1 & L\u00e1 2023", d:"Languedoc, France", p:"850", note:"O"},
       {n:"Benjamin Taillandier — Laguzelle 2023", d:"Languedoc, France", p:"950", note:"N/O/B"},
       {n:"Tenuta del Morer — Pinot Noir 2024", d:"Isonzo, Italy", p:"955", note:"O"},
       {n:"Valori — Montepulciano 2022", d:"Abruzzo, Italy", p:"975", note:"O/B"},
-      {n:"Maestà della Formica — Drankante 2023", d:"Tuscany, Italy", p:"1100", note:"N/O/B"},
+      {n:"Maest\u00e0 della Formica — Drankante 2023", d:"Tuscany, Italy", p:"1100", note:"N/O/B"},
       {n:"Ampeleia — Unlitro (1L) 2022", d:"Tuscany, Italy", p:"1100", note:"N/O/B"},
       {n:"Domaine de la Mongestine — Bob Singlar Red 2024", d:"Provence, France", p:"1150", note:"N/O/B"},
-      {n:"Ottin — Torrette Supérieur 2021", d:"Valle d'Aosta, Italy", p:"1250", note:"N"}
-    ]},
+      {n:"Ottin — Torrette Sup\u00e9rieur 2021", d:"Valle d'Aosta, Italy", p:"1250", note:"N"} ]},
     { sub:{en:"Beer",es:"Cerveza"}, items:[ {n:"Dos Equis", p:"80"} ]},
     { sub:{en:"Artisanal Mezcal",es:"Mezcal Artesanal"}, items:[
-      {n:"Cupreata · Cuishe · Tobala · Cenizo · Espadín", d:"glass / bottle", dEs:"copa / botella", p:"200 / 2800"}
-    ]},
+      {n:"Cupreata · Cuishe · Tobala · Cenizo · Espad\u00edn", d:"glass / bottle", dEs:"copa / botella", p:"200 / 2800"} ]},
     { sub:{en:"Non-Alcoholic",es:"Sin Alcohol"}, items:[
-      {n:"Orita Craft Soda", p:"80"}, {n:"Kombucha", p:"120"}, {n:"San Pellegrino", p:"75"}, {n:"Coca-Cola", p:"45"}
-    ]}
+      {n:"Orita Craft Soda", p:"80"}, {n:"Kombucha", p:"120"}, {n:"San Pellegrino", p:"75"}, {n:"Coca-Cola", p:"45"} ]}
   ]}
 ];
 
-/* ============ RENDER ============ */
-var CUR_LANG = "en";
-var CUR_CAT = "tapas";
-
-function esc(s){ return String(s); }
-
+var CUR_LANG="en", CUR_CAT="tapas";
 function renderPanel(catId, lang){
-  var cat = MENU.find(function(c){ return c.id===catId; });
-  if(!cat) return;
-  var dict = I18N[lang];
-  var html = '<div class="mcat-head"><h3>'+cat.title[lang]+'</h3><span class="ln"></span></div>';
+  var cat=MENU.find(function(c){return c.id===catId;}); if(!cat) return;
+  var dict=I18N[lang];
+  var html='<div class="mcat-head"><h3>'+cat.title[lang]+'</h3><span class="ln"></span></div>';
   cat.blocks.forEach(function(block){
-    if(block.sub) html += '<div class="subhead">'+block.sub[lang]+'</div>';
+    if(block.sub) html+='<div class="subhead">'+block.sub[lang]+'</div>';
     block.items.forEach(function(it){
       if(cat.type==="food"){
-        var name = lang==="en"? it[0] : it[1];
-        var desc = lang==="en"? it[2] : it[3];
-        var price = it[4], tag = it[5];
-        var tagHtml = tag==="veg" ? '<span class="tag-veg">veg</span>' : (tag==="new" ? '<span class="tag-new">'+dict.new_label+'</span>' : '');
-        html += '<div class="dish"><span class="info"><span class="nm">'+name+tagHtml+'</span>'+(desc?'<span class="ds">'+desc+'</span>':'')+'</span><span class="pr">'+price+'</span></div>';
+        var name=lang==="en"?it[0]:it[1], desc=lang==="en"?it[2]:it[3], price=it[4], tag=it[5];
+        var tagHtml=tag==="veg"?'<span class="tag-veg">veg</span>':(tag==="new"?'<span class="tag-new">'+dict.new_label+'</span>':'');
+        html+='<div class="dish"><span class="info"><span class="nm">'+name+tagHtml+'</span>'+(desc?'<span class="ds">'+desc+'</span>':'')+'</span><span class="pr">'+price+'</span></div>';
       } else {
-        var note = it.note ? '<span class="note">'+it.note+'</span>' : '';
-        var detail = it.d ? (lang==="es" && it.dEs ? it.dEs : it.d) : '';
-        html += '<div class="dish"><span class="info"><span class="nm">'+it.n+note+'</span>'+(detail?'<span class="ds">'+detail+'</span>':'')+'</span><span class="pr">'+it.p+'</span></div>';
+        var note=it.note?'<span class="note">'+it.note+'</span>':'';
+        var detail=it.d?((lang==="es"&&it.dEs)?it.dEs:it.d):'';
+        html+='<div class="dish"><span class="info"><span class="nm">'+it.n+note+'</span>'+(detail?'<span class="ds">'+detail+'</span>':'')+'</span><span class="pr">'+it.p+'</span></div>';
       }
     });
   });
-  if(cat.legend) html += '<div class="legend">'+dict.legend+'</div>';
-  document.getElementById("menu-panel").innerHTML = html;
+  if(cat.legend) html+='<div class="legend">'+dict.legend+'</div>';
+  document.getElementById("menu-panel").innerHTML=html;
 }
-
 function buildTabs(){
-  var bar = document.getElementById("tabs");
-  bar.innerHTML = "";
+  var bar=document.getElementById("tabs"); if(!bar) return;
+  bar.innerHTML="";
   MENU.forEach(function(cat){
-    var b = document.createElement("button");
-    b.type = "button";
-    b.dataset.cat = cat.id;
-    b.addEventListener("click", function(){
-      CUR_CAT = cat.id;
-      setActiveTab();
-      renderPanel(CUR_CAT, CUR_LANG);
-    });
+    var b=document.createElement("button"); b.type="button"; b.dataset.cat=cat.id;
+    b.addEventListener("click",function(){ CUR_CAT=cat.id; setActiveTab(); renderPanel(CUR_CAT,CUR_LANG); });
     bar.appendChild(b);
   });
 }
-function setActiveTab(){
-  document.querySelectorAll("#tabs button").forEach(function(b){
-    b.classList.toggle("active", b.dataset.cat===CUR_CAT);
-  });
-}
-function labelTabs(lang){
-  document.querySelectorAll("#tabs button").forEach(function(b){
-    var cat = MENU.find(function(c){ return c.id===b.dataset.cat; });
-    if(cat) b.textContent = cat.tab[lang];
-  });
-}
-
-/* ============ LANGUAGE ============ */
+function setActiveTab(){ document.querySelectorAll("#tabs button").forEach(function(b){ b.classList.toggle("active",b.dataset.cat===CUR_CAT); }); }
+function labelTabs(lang){ document.querySelectorAll("#tabs button").forEach(function(b){ var cat=MENU.find(function(c){return c.id===b.dataset.cat;}); if(cat) b.textContent=cat.tab[lang]; }); }
 function setLang(lang){
-  CUR_LANG = lang;
-  var dict = I18N[lang] || I18N.en;
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach(function(el){
-    var k = el.getAttribute("data-i18n");
-    if(dict[k] != null) el.innerHTML = dict[k];
-  });
-  document.querySelectorAll("[data-i18n-aria]").forEach(function(el){
-    var k = el.getAttribute("data-i18n-aria");
-    if(dict[k] != null) el.setAttribute("aria-label", dict[k]);
-  });
-  labelTabs(lang);
-  renderPanel(CUR_CAT, lang);
-  document.getElementById("lang-en").classList.toggle("active", lang==="en");
-  document.getElementById("lang-es").classList.toggle("active", lang==="es");
-  try{ localStorage.setItem("casa_lang", lang); }catch(e){}
+  CUR_LANG=lang; var dict=I18N[lang]||I18N.en;
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i18n]").forEach(function(el){ var k=el.getAttribute("data-i18n"); if(dict[k]!=null) el.innerHTML=dict[k]; });
+  document.querySelectorAll("[data-i18n-aria]").forEach(function(el){ var k=el.getAttribute("data-i18n-aria"); if(dict[k]!=null) el.setAttribute("aria-label",dict[k]); });
+  if(document.getElementById("tabs")){ labelTabs(lang); renderPanel(CUR_CAT,lang); }
+  var en=document.getElementById("lang-en"), es=document.getElementById("lang-es");
+  if(en) en.classList.toggle("active",lang==="en"); if(es) es.classList.toggle("active",lang==="es");
+  try{ localStorage.setItem("casa_lang",lang); }catch(e){}
 }
-
-/* ============ INIT ============ */
-(function(){
-  "use strict";
-  buildTabs();
-  setActiveTab();
-
-  var start = null;
-  try{ start = localStorage.getItem("casa_lang"); }catch(e){}
-  if(start!=="en" && start!=="es"){
-    start = (navigator.language||"").toLowerCase().indexOf("es")===0 ? "es" : "en";
-  }
+function initCommon(){
+  if(document.getElementById("tabs")){ buildTabs(); setActiveTab(); }
+  var start=null; try{ start=localStorage.getItem("casa_lang"); }catch(e){}
+  if(start!=="en"&&start!=="es"){ start=(navigator.language||"").toLowerCase().indexOf("es")===0?"es":"en"; }
   setLang(start);
-
-  document.getElementById("lang-en").addEventListener("click", function(){ setLang("en"); });
-  document.getElementById("lang-es").addEventListener("click", function(){ setLang("es"); });
-
-  var hdr = document.getElementById("hdr");
-  window.addEventListener("scroll", function(){ hdr.classList.toggle("scrolled", window.scrollY>40); }, {passive:true});
-
-  var row = document.querySelector('#hours tr[data-d="'+new Date().getDay()+'"]');
-  if(row) row.classList.add("today");
-
-  var track = document.getElementById("rev-track");
-  function step(){ var c = track.querySelector(".rev-card"); return c ? c.offsetWidth + 16 : 320; }
-  document.getElementById("rev-next").addEventListener("click", function(){ track.scrollBy({left: step(), behavior:"smooth"}); });
-  document.getElementById("rev-prev").addEventListener("click", function(){ track.scrollBy({left:-step(), behavior:"smooth"}); });
-
-  var els = document.querySelectorAll(".reveal");
+  var en=document.getElementById("lang-en"), es=document.getElementById("lang-es");
+  if(en) en.addEventListener("click",function(){ setLang("en"); });
+  if(es) es.addEventListener("click",function(){ setLang("es"); });
+  var hdr=document.getElementById("hdr");
+  if(hdr) window.addEventListener("scroll",function(){ hdr.classList.toggle("scrolled",window.scrollY>40); },{passive:true});
+  var row=document.querySelector('#hours tr[data-d="'+new Date().getDay()+'"]'); if(row) row.classList.add("today");
+  var track=document.getElementById("rev-track");
+  if(track){
+    var step=function(){ var c=track.querySelector(".rev-card"); return c?c.offsetWidth+16:320; };
+    var nx=document.getElementById("rev-next"), pv=document.getElementById("rev-prev");
+    if(nx) nx.addEventListener("click",function(){ track.scrollBy({left:step(),behavior:"smooth"}); });
+    if(pv) pv.addEventListener("click",function(){ track.scrollBy({left:-step(),behavior:"smooth"}); });
+  }
+  var els=document.querySelectorAll(".reveal");
   if("IntersectionObserver" in window){
-    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold:.12});
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); },{threshold:.12});
     els.forEach(function(el){ io.observe(el); });
   } else { els.forEach(function(el){ el.classList.add("in"); }); }
-})();
+}
+document.addEventListener("DOMContentLoaded", initCommon);
+
 </script>
 </body>
 </html>
