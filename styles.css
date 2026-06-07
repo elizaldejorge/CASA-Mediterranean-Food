@@ -1,0 +1,232 @@
+/* =====================================================================
+   CASA — Mediterranean Food & Wine, Puerto Aventuras
+   styles.css  ·  mobile-first, desktop as progressive enhancement
+   ---------------------------------------------------------------------
+   Sections:
+     1.  Theme tokens (CSS variables)
+     2.  Base / reset
+     3.  Reusable type & components (wordmark, buttons, eyebrow)
+     4.  Header
+     5.  Hero
+     6.  Section shell
+     7.  About
+     8.  Menu
+     9.  Gallery
+     10. Visit / Contact
+     11. Footer
+     12. Sticky mobile bar
+     13. Scroll-reveal
+     14. Responsive (min-width breakpoints)
+   ===================================================================== */
+
+/* ---------- 1. THEME TOKENS ---------- */
+:root{
+  --slate:#3f3f4a;        /* logo background */
+  --slate-deep:#33333d;
+  --slate-soft:#4a4a56;
+  --cream:#efe8d6;        /* logo lettering */
+  --cream-dim:#cbc6b8;
+  --terra:#c79064;        /* warm Mediterranean accent */
+  --terra-deep:#a9744b;
+  --olive:#8d9277;
+  --line:rgba(239,232,214,.16);
+  --shadow:0 18px 50px -20px rgba(0,0,0,.55);
+  --wm-track:.42em;       /* wordmark letter-spacing */
+}
+
+/* ---------- 2. BASE / RESET ---------- */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--slate);
+  color:var(--cream);
+  font-family:"Karla",system-ui,sans-serif;
+  font-weight:300;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* subtle film-grain atmosphere overlay */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;
+  opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- 3. REUSABLE TYPE & COMPONENTS ---------- */
+.wm{
+  font-family:"Josefin Sans",sans-serif;
+  font-weight:200;letter-spacing:var(--wm-track);
+  text-transform:uppercase;color:var(--cream);
+  padding-left:var(--wm-track);
+}
+.eyebrow{
+  font-family:"Josefin Sans",sans-serif;font-weight:300;
+  text-transform:uppercase;letter-spacing:.36em;
+  font-size:.7rem;color:var(--terra);padding-left:.36em;
+}
+h2{
+  font-family:"Cormorant Garamond",serif;font-weight:500;
+  font-size:clamp(2rem,8vw,2.9rem);line-height:1.08;
+  letter-spacing:.01em;color:var(--cream);margin:.5rem 0 1.1rem;
+}
+h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.45rem}
+p{color:var(--cream-dim)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:"Josefin Sans",sans-serif;font-weight:300;letter-spacing:.18em;
+  text-transform:uppercase;font-size:.78rem;padding:1rem 1.4rem;border-radius:50px;transition:.25s;
+}
+.btn-solid{background:var(--terra);color:var(--slate-deep)}
+.btn-solid:hover,.btn-solid:active{background:var(--terra-deep)}
+.btn-ghost{border:1px solid var(--line);color:var(--cream)}
+.btn-ghost:hover,.btn-ghost:active{border-color:var(--cream)}
+
+/* ---------- 4. HEADER ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.85rem 1.1rem;
+  background:rgba(51,51,61,.72);backdrop-filter:blur(12px);
+  border-bottom:1px solid transparent;transition:.35s;
+}
+header.scrolled{border-bottom-color:var(--line);background:rgba(51,51,61,.92)}
+header .wm{font-size:1.35rem}
+.call-btn{
+  display:inline-flex;align-items:center;gap:.45rem;
+  font-family:"Josefin Sans",sans-serif;font-weight:300;letter-spacing:.12em;
+  text-transform:uppercase;font-size:.72rem;
+  border:1px solid var(--terra);color:var(--cream);
+  padding:.55rem .85rem;border-radius:40px;transition:.25s;
+}
+.call-btn svg{width:14px;height:14px;stroke:var(--terra)}
+.call-btn:hover,.call-btn:active{background:var(--terra);color:var(--slate-deep)}
+.call-btn:hover svg{stroke:var(--slate-deep)}
+
+/* ---------- 5. HERO ---------- */
+.hero{
+  position:relative;min-height:100svh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+  padding:7rem 1.4rem 3rem;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(63,63,74,.35) 0%, rgba(51,51,61,.92) 60%, var(--slate-deep) 100%),
+    url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/c7/80/d8/juice-french-style-rotisserie.jpg?w=1200&h=1400&s=1") center/cover no-repeat;
+}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(51,51,61,.55),rgba(51,51,61,.35) 40%,var(--slate-deep) 98%)}
+.hero-inner{position:relative;z-index:2;max-width:640px}
+.hero .mark{
+  font-family:"Josefin Sans",sans-serif;font-weight:100;
+  font-size:clamp(4rem,26vw,9rem);line-height:1;
+  letter-spacing:.34em;padding-left:.34em;text-transform:uppercase;color:var(--cream);
+  text-shadow:0 8px 40px rgba(0,0,0,.5);
+}
+.hero .rule{width:60px;height:1px;background:var(--terra);margin:1.4rem auto 1.3rem}
+.hero .tag{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.2rem,5.5vw,1.7rem);color:var(--cream);line-height:1.4}
+.hero .sub{margin-top:.9rem;font-size:.95rem;letter-spacing:.02em}
+.stars{display:inline-flex;gap:.5rem;align-items:center;margin-top:1.6rem;font-family:"Josefin Sans",sans-serif;letter-spacing:.16em;font-size:.72rem;text-transform:uppercase;color:var(--cream-dim)}
+.stars b{color:var(--terra);font-weight:400}
+.hero-cta{display:flex;flex-direction:column;gap:.8rem;margin-top:2rem;width:100%;max-width:300px;margin-inline:auto}
+.scroll-hint{position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);z-index:2;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-dim);animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0);opacity:.55}50%{transform:translate(-50%,7px);opacity:1}}
+
+/* ---------- 6. SECTION SHELL ---------- */
+section{padding:4.5rem 1.4rem;position:relative}
+.wrap{max-width:1080px;margin:0 auto}
+
+/* ---------- 7. ABOUT ---------- */
+.about p{font-size:1.05rem;margin-bottom:1.1rem;max-width:60ch}
+.about .lead{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.4rem;color:var(--cream);line-height:1.5}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.8rem}
+.tags span{font-family:"Josefin Sans",sans-serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim);border:1px solid var(--line);padding:.45rem .8rem;border-radius:40px}
+
+/* ---------- 8. MENU ---------- */
+.menu{background:var(--slate-deep)}
+.menu-note{font-size:.92rem;margin-bottom:2.2rem;max-width:58ch}
+.menu-note b{color:var(--terra);font-weight:400}
+.mcat{margin-bottom:2.6rem;padding-bottom:.4rem}
+.mcat-head{display:flex;align-items:baseline;gap:.9rem;margin-bottom:1.1rem}
+.mcat-head h3{color:var(--cream);white-space:nowrap}
+.mcat-head .ln{flex:1;height:1px;background:var(--line)}
+.mcat-head .pip{font-family:"Josefin Sans",sans-serif;font-size:.62rem;letter-spacing:.2em;color:var(--terra);text-transform:uppercase}
+.dish{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 0;border-bottom:1px dashed var(--line)}
+.dish:last-child{border-bottom:none}
+.dish .nm{color:var(--cream);font-weight:400;font-size:1.02rem}
+.dish .ds{display:block;color:var(--cream-dim);font-size:.85rem;font-weight:300;margin-top:.15rem}
+.dish .vg{font-family:"Josefin Sans",sans-serif;font-size:.6rem;letter-spacing:.14em;color:var(--olive);text-transform:uppercase;white-space:nowrap;padding-top:.25rem}
+
+/* ---------- 9. GALLERY ---------- */
+.gallery .grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:1.5rem}
+.gallery figure{position:relative;overflow:hidden;border-radius:10px;aspect-ratio:1/1;background:var(--slate-soft)}
+.gallery figure.tall{grid-row:span 2;aspect-ratio:auto}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.gallery figure:hover img,.gallery figure:active img{transform:scale(1.06)}
+
+/* ---------- 10. VISIT / CONTACT ---------- */
+.visit{background:var(--slate-deep)}
+.vcols{display:flex;flex-direction:column;gap:2.4rem;margin-top:1.5rem}
+.info-row{display:flex;gap:.9rem;align-items:flex-start;padding:.6rem 0}
+.info-row svg{width:18px;height:18px;stroke:var(--terra);flex:none;margin-top:.3rem}
+.info-row .k{font-family:"Josefin Sans",sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-dim)}
+.info-row .v{color:var(--cream);font-size:1.02rem}
+.info-row a.v:hover,.info-row a.v:active{color:var(--terra)}
+.hours-tbl{width:100%;border-collapse:collapse;margin-top:.4rem}
+.hours-tbl td{padding:.5rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.hours-tbl td:first-child{color:var(--cream-dim);font-family:"Josefin Sans",sans-serif;letter-spacing:.08em;font-size:.8rem;text-transform:uppercase}
+.hours-tbl td:last-child{text-align:right;color:var(--cream)}
+.hours-tbl tr.closed td:last-child{color:var(--terra-deep)}
+.hours-tbl tr.today td{color:var(--terra)!important}
+.hours-tbl tr.today td:first-child::before{content:"● ";font-size:.6em;vertical-align:middle}
+.map-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.2rem;font-family:"Josefin Sans",sans-serif;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.map-link svg{width:15px;height:15px;stroke:var(--terra)}
+
+/* ---------- 11. FOOTER ---------- */
+footer{background:var(--slate);text-align:center;padding:3.2rem 1.4rem 7rem}
+footer .wm{font-size:2rem;display:inline-block;margin-bottom:1rem}
+footer .fmark{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--cream-dim);font-size:1.05rem}
+footer .fcontact{margin-top:1.3rem;font-size:.88rem;color:var(--cream-dim);line-height:1.9}
+footer .fcontact a:hover,footer .fcontact a:active{color:var(--terra)}
+footer .fine{margin-top:1.8rem;font-size:.68rem;letter-spacing:.08em;color:rgba(203,198,184,.45)}
+
+/* ---------- 12. STICKY MOBILE BAR ---------- */
+.mobile-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;display:flex;
+  background:rgba(51,51,61,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line);
+}
+.mobile-bar a{flex:1;text-align:center;padding:1rem;font-family:"Josefin Sans",sans-serif;
+  font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:.5rem}
+.mobile-bar a svg{width:15px;height:15px}
+.mobile-bar .mb-call{color:var(--cream);border-right:1px solid var(--line)}
+.mobile-bar .mb-call svg{stroke:var(--terra)}
+.mobile-bar .mb-map{color:var(--terra)}
+.mobile-bar .mb-map svg{stroke:var(--terra)}
+
+/* ---------- 13. SCROLL-REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .scroll-hint{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- 14. RESPONSIVE (mobile-first → enhance up) ---------- */
+@media(min-width:680px){
+  .hero-cta{flex-direction:row;max-width:none;justify-content:center}
+  .gallery .grid{grid-template-columns:repeat(3,1fr)}
+  .gallery figure.tall{grid-row:span 2}
+  .mobile-bar{display:none}
+  footer{padding-bottom:3.2rem}
+}
+@media(min-width:920px){
+  section{padding:6rem 2rem}
+  .menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 3.5rem}
+  .vcols{flex-direction:row;justify-content:space-between}
+  .vcols>div{flex:1}
+}
